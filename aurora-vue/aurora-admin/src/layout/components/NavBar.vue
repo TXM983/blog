@@ -90,7 +90,9 @@ export default {
     },
     closeAllTab() {
       this.$store.commit('resetTab')
-      this.$router.push({ path: '/' })
+      if(this.$router.currentRoute.path !== '/'){
+        this.$router.push({ path: '/' })
+      }
     },
     fullScreen() {
       let element = document.documentElement
