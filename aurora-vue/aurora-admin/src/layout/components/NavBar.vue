@@ -123,7 +123,7 @@ export default {
   computed: {
     isActive() {
       return function (tab) {
-        if (tab.path == this.$route.path) {
+        if (tab.path === this.$route.path) {
           return 'tabs-view-item-active'
         }
         return 'tabs-view-item'
