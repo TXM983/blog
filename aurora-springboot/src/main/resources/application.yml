@@ -48,9 +48,9 @@ spring:
       uris: 127.0.0.1:9200
 
   mail:
-    host: smtp.163.com
-    username: 1554267532@qq.com
-    password: zy15571389853
+    host: smtp.qq.com
+    username: zhangyang0581@qq.com
+    password: tpufyhczhhurifbj  #qq邮箱发送邮件授权码
     default-encoding: UTF-8
     protocol: smtp
     port: 465
