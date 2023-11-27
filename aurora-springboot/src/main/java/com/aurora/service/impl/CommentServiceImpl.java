@@ -325,4 +325,8 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         return emailDTO;
     }
 
+    @Override
+    public List<CommentDTO> getByParentId(Integer commentId) {
+        return commentMapper.getByParentId(commentId);
+    }
 }

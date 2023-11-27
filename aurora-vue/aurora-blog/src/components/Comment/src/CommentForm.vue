@@ -5,15 +5,15 @@
       <textarea
         v-model="commentContent"
         class="w-full shadow-md rounded-md p-4 focus:outline-none input"
-        placeholder="Add comment..."
+        placeholder="快来写下你的评论吧..."
         cols="30"
         rows="5" />
       <div class="justify-between" style="text-align: right">
         <button
           @click="saveComment"
           id="submit-button"
-          class="mt-5 w-32 text-white p-2 rounded-lg shadow-lg transition transform hover:scale-105 flex float-right">
-          <span class="text-center flex-grow commit">Add Comment</span>
+          class="mt-5 w-16 text-white p-2 rounded-lg shadow-lg transition transform hover:scale-105 flex float-right">
+          <span class="text-center flex-grow commit">发 布</span>
         </button>
       </div>
       <div class="w-full border-b-2 mt-6 wire"></div>
@@ -125,6 +125,7 @@ export default defineComponent({
 .input {
   background: var(--background-primary);
   resize: none;
+  font-size: 15px;
 }
 #submit-button {
   outline: none;

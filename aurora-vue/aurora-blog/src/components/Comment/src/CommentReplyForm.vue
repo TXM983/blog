@@ -13,13 +13,13 @@
           @click="saveReply"
           id="submit-button"
           class="mt-5 w-16 text-white p-2 rounded-lg shadow-lg transition transform hover:scale-105 flex float-right">
-          <span class="text-center flex-grow commit">Reply</span>
+          <span class="text-center flex-grow commit">回复</span>
         </button>
         <button
           @click="CancelReply"
           id="submit-button"
           class="mt-5 mr-3 w-16 text-white p-2 rounded-lg shadow-lg transition transform hover:scale-105 flex float-right">
-          <span class="text-center flex-grow commit">Cancel</span>
+          <span class="text-center flex-grow commit">取消</span>
         </button>
       </div>
     </div>

@@ -7,7 +7,7 @@
         <div class="flex justify-between mt-2 text-xs text-gray-400 space-x-3 md:space-x-16">
           <span> {{ reply.nickname }} | {{ time }}</span>
           <div>
-            <span @click="clickOnSonReply" class="cursor-pointer reply-button">Reply</span>
+            <span @click="clickOnSonReply" class="cursor-pointer reply-button">回复</span>
           </div>
         </div>
       </div>
@@ -88,7 +88,10 @@ export default defineComponent({
   background: var(--background-primary);
 }
 .reply-button {
-  color: var(--text-accent);
+  font-weight: normal; /** 字体大小，normal-正常，bold-加粗，可设置自定义大小*/
+  color: var(--text-dim);
+  letter-spacing: 1px; /** 字间距*/
+  font-size: 13px; /**字体大小 */
 }
 .commentContent {
   line-height: 26px;

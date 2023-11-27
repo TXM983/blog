@@ -70,6 +70,12 @@ public class CommentController {
     @ApiOperation(value = "删除评论")
     @DeleteMapping("/admin/comments")
     public ResultVO<?> deleteComments(@RequestBody List<Integer> commentIdList) {
+        for(Integer commentId:commentIdList){
+            List<CommentDTO> commentDTOS = commentService.getByParentId(commentId);
+            if(!commentDTOS.isEmpty()){
+                return ResultVO.fail("请勿删除带有回复的评论");
+            }
+        }
         commentService.removeByIds(commentIdList);
         return ResultVO.ok();
     }

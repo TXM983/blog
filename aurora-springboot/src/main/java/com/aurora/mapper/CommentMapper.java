@@ -30,4 +30,6 @@ public interface CommentMapper extends BaseMapper<Comment> {
 
     CommentCountDTO listCommentCountByTypeAndTopicId(@Param("type") Integer type, @Param("topicId") Integer topicId);
 
+    List<CommentDTO> getByParentId(@Param("commentId") Integer commentId);
+
 }

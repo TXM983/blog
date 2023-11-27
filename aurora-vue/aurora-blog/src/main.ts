@@ -42,6 +42,6 @@ plugins.forEach((plugin) => {
 registerSvgIcon(app)
 registerObSkeleton(app)
 app.mount('#app')
-console.log('%c 网站作者:花未眠', 'color:#bada55')
-console.log('%c qq:1909925152', 'color:#bada55')
+console.log('%c 网站作者:沐小橙', 'color:#bada55')
+console.log('%c qq:1554267532', 'color:#bada55')
 api.report()

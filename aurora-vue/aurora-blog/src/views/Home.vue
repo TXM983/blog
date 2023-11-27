@@ -38,7 +38,7 @@
           <svg-icon icon-class="chevron" />
         </span>
         <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          <template v-if="haveArticles === true">
+          <template v-if="haveArticles">
             <li v-for="article in articles" :key="article.id">
               <ArticleCard class="home-article" :data="article" />
             </li>

@@ -26,4 +26,6 @@ public interface CommentService extends IService<Comment> {
 
     void updateCommentsReview(ReviewVO reviewVO);
 
+    List<CommentDTO> getByParentId(Integer commentId);
+
 }

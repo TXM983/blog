@@ -145,4 +145,9 @@
           AND topic_id = #{topicId}
         GROUP BY topic_id
     </select>
+
+    <select id="getByParentId" resultType="com.aurora.model.dto.CommentDTO">
+        select * from t_comment where parent_id = #{commentId}
+    </select>
+
 </mapper>
