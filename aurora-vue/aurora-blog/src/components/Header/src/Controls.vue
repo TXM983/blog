@@ -10,8 +10,8 @@
         <span v-if="$i18n.locale == 'en'">EN</span>
       </span>
       <DropdownMenu>
-        <DropdownItem name="en">English</DropdownItem>
         <DropdownItem name="cn">中文</DropdownItem>
+        <DropdownItem name="en">English</DropdownItem>
       </DropdownMenu>
     </Dropdown>
     <template v-if="userInfo === ''">
