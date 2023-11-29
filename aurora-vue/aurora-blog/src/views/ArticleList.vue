@@ -67,8 +67,8 @@ export default defineComponent({
               .replace(/[|]*\n/, '')
               .replace(/&npsp;/gi, '')
           })
-          reactiveData.articles = data.data.records
-          pagination.total = data.data.count
+          reactiveData.articles = data.data.records || []
+          pagination.total = data.data.count || 0
           reactiveData.haveArticles = true
         })
     }

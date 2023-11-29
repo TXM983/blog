@@ -97,10 +97,10 @@ export default defineComponent({
       }
       api.getTalks(params).then(({ data }) => {
         reactiveData.talks = data.data.records
-        pagination.total = data.data.count
+        pagination.total = data.data.count || 0
         reactiveData.talks.forEach((item: any) => {
           if (item.imgs) {
-            reactiveData.images.push(...item.imgs)
+            reactiveData.images.push(...item.imgs || [])
           }
         })
       })

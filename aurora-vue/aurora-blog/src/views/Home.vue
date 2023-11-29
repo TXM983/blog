@@ -144,7 +144,7 @@ export default defineComponent({
             .replace(/&npsp;/gi, '')
         })
         articleStore.topArticle = data.data.topArticle
-        articleStore.featuredArticles = data.data.featuredArticles
+        articleStore.featuredArticles = data.data.featuredArticles || []
       })
     }
     const fetchArticles = () => {
@@ -166,8 +166,8 @@ export default defineComponent({
                   .replace(/[|]*\n/, '')
                   .replace(/&npsp;/gi, '')
               })
-              articleStore.articles = data.data.records
-              pagination.total = data.data.count
+              articleStore.articles = data.data.records || []
+              pagination.total = data.data.count || 0
               reactiveData.haveArticles = true
             }
           })
@@ -190,15 +190,15 @@ export default defineComponent({
               .replace(/[|]*\n/, '')
               .replace(/&npsp;/gi, '')
           })
-          articleStore.articles = data.data.records
-          pagination.total = data.data.count
+          articleStore.articles = data.data.records || []
+          pagination.total = data.data.count || 0
           reactiveData.haveArticles = true
         })
     }
     const fetchCategories = () => {
       categoryStore.categories = []
       api.getAllCategories().then(({ data }) => {
-        categoryStore.categories.push(...data.data)
+        categoryStore.categories.push(...data.data || [])
       })
     }
     const expandHandler = () => {

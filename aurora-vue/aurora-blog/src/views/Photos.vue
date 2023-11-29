@@ -85,7 +85,7 @@ export default defineComponent({
         if (data.data.photos.length > 0) {
           reactiveData.current++
           reactiveData.photoAlbumName = data.data.photoAlbumName
-          reactiveData.photos.push(...data.data.photos)
+          reactiveData.photos.push(...data.data.photos || [])
         } else {
           reactiveData.noResult = true
         }
