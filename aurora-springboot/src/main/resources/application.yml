@@ -97,7 +97,7 @@ upload:
     bucketName: blog
 
 website:
-  url: http://8.130.99.109
+  url: http://8.130.99.109:9815
 
 qq:
   app-id: QQ APPID
