@@ -82,10 +82,14 @@ import { useI18n } from 'vue-i18n'
 import Paginator from '@/components/Paginator.vue'
 import api from '@/api/api'
 import markdownToHtml from '@/utils/markdown'
+import ObSkeleton from "@/components/LoadingSkeleton/src/Skeleton.vue";
+import SvgIcon from "@/components/SvgIcon/index.vue";
 
 export default defineComponent({
   name: 'Home',
   components: {
+    SvgIcon,
+    ObSkeleton,
     Feature,
     FeatureList,
     ArticleCard,
