@@ -1,7 +1,7 @@
 export default {
   qqLogin: {
-    QQ_APP_ID: '1554267532',
-    QQ_REDIRECT_URI: 'http://8.130.99.109:9815/oauth/login/qq'
+    QQ_APP_ID: '102080626',
+    QQ_REDIRECT_URI: 'https://www.aimiliy.top/oauth/login/qq'
   },
   routes: [
     {

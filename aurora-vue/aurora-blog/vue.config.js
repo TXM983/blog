@@ -9,7 +9,7 @@ module.exports = defineConfig({
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://8.130.99.109:9816/api',
+        target: 'https://static.aimiliy.top/api',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''
