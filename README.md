@@ -1,4 +1,5 @@
 # blog
+基于hexo-aurora-theme主题搭建的博客系统
 
 项目博客前端访问地址：https://www.aimiliy.top/
 
