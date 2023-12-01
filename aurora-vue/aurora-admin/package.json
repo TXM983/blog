@@ -23,6 +23,7 @@
     "vue-axios": "^3.4.1",
     "vue-calendar-heatmap": "^0.8.4",
     "vue-echarts": "^5.0.0-beta.0",
+    "vue-lazyload": "^3.0.0",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2",
     "vuex-persistedstate": "^4.1.0"

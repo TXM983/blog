@@ -26,6 +26,7 @@ import tagCloud from './components/tag-cloud'
 import dayjs from 'dayjs'
 import Md_Katex from '@iktakahiro/markdown-it-katex'
 import mermaidPlugin from "@agoose77/markdown-it-mermaid";
+import VueLazyload from 'vue-lazyload';
 
 Vue.config.productionTip = false
 Vue.prototype.config = config
@@ -35,6 +36,7 @@ Vue.use(tagCloud)
 Vue.use(VueCalendarHeatmap)
 Vue.use(VueAxios, axios)
 Vue.component('v-chart', ECharts)
+Vue.use(VueLazyload);
 Vue.prototype.$moment = dayjs
 mavonEditor.markdownIt.set({}).use(Md_Katex).use(mermaidPlugin);
 

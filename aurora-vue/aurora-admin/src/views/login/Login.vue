@@ -1,13 +1,17 @@
 <template>
   <div class="login-container">
+    <video ref="videoPlayer" class="fullscreen-video" autoplay loop muted >
+      <source src="https://blog-txm.oss-cn-beijing.aliyuncs.com/aurora/video/Ori%20DE%20Silent.mp4" type="video/mp4">
+    </video>
     <div class="login-card">
       <div class="login-title">管理员登录</div>
-      <el-form status-icon :model="loginForm" :rules="rules" ref="ruleForm" class="login-form">
+      <el-form status-icon :model="loginForm" ref="ruleForm" class="login-form">
         <el-form-item prop="username">
           <el-input
             v-model="loginForm.username"
             prefix-icon="el-icon-user-solid"
             placeholder="用户名"
+            class="custom-input"
             @keyup.enter.native="login" />
         </el-form-item>
         <el-form-item prop="password">
@@ -16,10 +20,11 @@
             prefix-icon="iconfont el-icon-mymima"
             show-password
             placeholder="密码"
+            class="custom-input"
             @keyup.enter.native="login" />
         </el-form-item>
       </el-form>
-      <el-button type="primary" @click="login">登录</el-button>
+      <el-button type="primary" @click="login" round >登录</el-button>
     </div>
   </div>
 </template>
@@ -36,7 +41,7 @@ export default {
       rules: {
         username: [{ required: true, message: '用户名不能为空', trigger: 'blur' }],
         password: [{ required: true, message: '密码不能为空', trigger: 'blur' }]
-      }
+      },
     }
   },
   methods: {
@@ -68,27 +73,40 @@ export default {
 
 <style scoped>
 .login-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: url(https://blog-txm.oss-cn-beijing.aliyuncs.com/aurora/photos/765664a8a75211296a9cd89671d6d660.png) center center / cover
-    no-repeat;
+  position: relative;
+  height: 100vh;
+  overflow: hidden; /* 隐藏溢出的部分，防止出现滚动条 */
 }
+
+.custom-input >>> .el-input__inner{
+  border: 0;
+  box-shadow: 0 0 0 0;
+}
+
+.fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持视频比例并覆盖整个容器 */
+}
+
 .login-card {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: #fff;
-  padding: 170px 60px 180px;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8); /* 使用透明背景，让视频透过 */
+  padding: 2rem;
   width: 350px;
+  height: 280px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加一些阴影效果 */
+  border-radius: 10px;
 }
 .login-title {
   color: #303133;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }
 .login-form {
   margin-top: 1.2rem;
