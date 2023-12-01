@@ -49,8 +49,8 @@ spring:
 
   mail:
     host: smtp.qq.com
-    username: zhangyang0581@qq.com
-    password: tpufyhczhhurifbj  #qq邮箱发送邮件授权码
+    username: qq号
+    password:   #qq邮箱发送邮件授权码
     default-encoding: UTF-8
     protocol: smtp
     port: 465
@@ -84,16 +84,16 @@ search:
 upload:
   mode: oss
   oss:
-    url: http://blog-txm.oss-cn-beijing.aliyuncs.com/
-    endpoint: oss-cn-beijing.aliyuncs.com
-    accessKeyId: LTAI5tEbNKZcKvMVTMhdeuy4
-    accessKeySecret: OaKeKFKN85Im0XV5XyvGR446m7SC7f
-    bucketName: blog-txm
+    url: 访问域名
+    endpoint: 域名
+    accessKeyId: 自己的阿里云accessKeyId
+    accessKeySecret: 自己阿里云accessKeySecret
+    bucketName: 自己的仓库名
   minio:
     url: http://127.0.0.1:9000/
     endpoint: http://127.0.0.1:9000
-    accesskey: minioadmin
-    secretKey: minioadmin
+    accesskey: #####
+    secretKey: #####
     bucketName: blog
 
 website:
